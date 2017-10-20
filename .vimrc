@@ -84,7 +84,7 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-Q> bp \| bd # 
 nmap ll ^v$h<C-y>,h4<CR>
 vmap <C-h> y:%s/<C-r>"/
-map <C-f> yiw/<C-r><CR>
+nmap ff yiw/<C-r>"<CR>
 
 set splitbelow
 set splitright
@@ -108,6 +108,7 @@ highlight Pmenu ctermfg=7 ctermbg=8
 highlight PmenuSel ctermfg=7 ctermbg=6
 
 highlight BufTabLineFill ctermfg=7
+highlight BufTabLineHidden ctermbg=8
 
 let g:SuperTabDefaultCompletionType = "context"
 augroup vagrant
