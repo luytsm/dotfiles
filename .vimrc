@@ -16,6 +16,7 @@ Plugin 'tomasr/molokai'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'mhinz/vim-grepper'
 Plugin 'fatih/vim-go'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
@@ -85,6 +86,9 @@ nnoremap <C-Q> bp \| bd #
 nmap ll ^v$h<C-y>,h4<CR>
 vmap <C-h> y:%s/<C-r>"/
 nmap ff yiw/<C-r>"<CR>
+nmap gf yiw:Grepper -query <C-r>"<CR>
+nmap gn :cn<CR>
+nmap gp :cp<CR>
 
 set splitbelow
 set splitright
