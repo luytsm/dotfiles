@@ -65,6 +65,8 @@ alias ls='ls --color=auto'
 alias ll='ls -ltrh'
 alias lls='ls -lShr'
 
+alias tree='tree -A'
+
 alias gs='git status'
 
 fp()

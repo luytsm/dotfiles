@@ -7,22 +7,29 @@ Plugin 'ap/vim-buftabline'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
+Plugin 'godlygeek/tabular'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'ervandew/supertab'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'pearofducks/ansible-vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'tomasr/molokai'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'nanotech/jellybeans.vim'
 Plugin 'mhinz/vim-grepper'
 Plugin 'fatih/vim-go'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'junegunn/goyo.vim'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'zchee/deoplete-jedi'
 
 call vundle#end()          
 filetype plugin indent on  
 syntax on
+
+
+let g:deoplete#enable_at_startup = 1 
 
 colorscheme default
 set background=dark
@@ -59,7 +66,6 @@ let g:instant_markdown_autostart = 0
 let mapleader=' '
 inoremap jj <ESC>
 imap hh <C-y>,
-imap nn <C-y>n
 :map <F7> z=
 :map <F8> zg
 :map <C-o> :NERDTreeToggle<CR>
@@ -86,14 +92,17 @@ nnoremap <C-Q> bp \| bd #
 nmap ll ^v$h<C-y>,h4<CR>
 vmap <C-h> y:%s/<C-r>"/
 nmap ff yiw/<C-r>"<CR>
-nmap gf yiw:Grepper -query <C-r>"<CR>
+nmap gf yiw:GrepperGrep <C-r>"<CR>
+nmap gs  <plug>(GrepperOperator)
+nmap fg yiw:GrepperGrep
 nmap gn :cn<CR>
 nmap gp :cp<CR>
+nmap gc :ccl<CR>
 
 set splitbelow
 set splitright
 
-let NERDTreeQuitOnOpen=1
+"let NERDTreeQuitOnOpen=1
 set clipboard=unnamedplus
 set spelllang=nl
 
@@ -120,4 +129,4 @@ augroup vagrant
     au BufRead,BufNewFile Vagrantfile set filetype=ruby
   augroup END
 
-
+let g:table_mode_corner='|'
