@@ -1,0 +1,76 @@
+
+URxvt.font: xft:Hack:size=12
+URxvt*scrollBar:  false
+
+*foreground:        #c7c6c7
+*background:        #262f31
+*.foreground:       #c7c6c7
+*.background:       #262f31
+*.cursorColor:      #ffffff
+URxvt*foreground:   #c7c6c7
+XTerm*foreground:   #c7c6c7
+UXTerm*foreground:  #c7c6c7
+URxvt*background:   [100]#262f31
+XTerm*background:   #262f31
+UXTerm*background:  #262f31
+URxvt*cursorColor:  #c7c6c7
+XTerm*cursorColor:  #c7c6c7
+UXTerm*cursorColor: #c7c6c7
+URxvt*borderColor:  [100]#262f31
+
+! Colors 0-15.
+*.color0: #262f31
+*color0:  #262f31
+*.color1: #968479
+*color1:  #968479
+*.color2: #C79A75
+*color2:  #C79A75
+*.color3: #517987
+*color3:  #517987
+*.color4: #7D7F81
+*color4:  #7D7F81
+*.color5: #368E9C
+*color5:  #368E9C
+*.color6: #679094
+*color6:  #679094
+*.color7: #c7c6c7
+*color7:  #c7c6c7
+*.color8: #8b8a8b
+*color8:  #8b8a8b
+*.color9: #968479
+*color9:  #968479
+*.color10: #C79A75
+*color10:  #C79A75
+*.color11: #517987
+*color11:  #517987
+*.color12: #7D7F81
+*color12:  #7D7F81
+*.color13: #368E9C
+*color13:  #368E9C
+*.color14: #679094
+*color14:  #679094
+*.color15: #c7c6c7
+*color15:  #c7c6c7
+
+*fading: 35 
+
+! Black color that will not be affected by bold highlighting.
+*.color66: #262f31
+*color66:  #262f31
+
+! Set depth to make transparency work.
+URxvt*depth: 32
+
+URxvt.keysym.Control-Up:      \033[1;5A
+URxvt.keysym.Control-Down:    \033[1;5B
+URxvt.keysym.Control-Left:    \033[1;5D
+URxvt.keysym.Control-Right:   \033[1;5C
+URxvt.keysym.Home:            \033[1~
+URxvt.keysym.End:             \033[4~
+URxvt.keysym.KP_Home:         \033[1~
+URxvt.keysym.KP_End:          \033[4~
+URxvt.keysym.M-minus:    command:\033]710;xft:Hack:size=12\007
+URxvt.keysym.M-plus:    command:\033]710;xft:Hack:size=22\007
+
+URxvt.perl-ext-common: selection-to-clipboard
+URxvt.letterSpace: -0

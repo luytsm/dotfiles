@@ -10,19 +10,14 @@ Plugin 'mattn/emmet-vim'
 Plugin 'godlygeek/tabular'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'ervandew/supertab'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'pearofducks/ansible-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'mhinz/vim-grepper'
 Plugin 'fatih/vim-go'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'junegunn/goyo.vim'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'roxma/nvim-yarp'
-Plugin 'roxma/vim-hug-neovim-rpc'
-Plugin 'zchee/deoplete-jedi'
 
 call vundle#end()          
 filetype plugin indent on  
@@ -106,11 +101,6 @@ set splitright
 set clipboard=unnamedplus
 set spelllang=nl
 
-let g:ctrlp_working_path_mode = ''
-"let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-if executable('ag')
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-  endif
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <C-w> :bp\|bd #<CR>
