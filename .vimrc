@@ -16,6 +16,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'fatih/vim-go'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'mhinz/vim-grepper'
 Plugin 'junegunn/goyo.vim'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
@@ -87,7 +88,7 @@ nnoremap <C-Q> bp \| bd #
 nmap ll ^v$h<C-y>,h4<CR>
 vmap <C-h> y:%s/<C-r>"/
 nmap ff yiw/<C-r>"<CR>
-nmap gf yiw:GrepperGrep <C-r>"<CR>
+nmap gf yiw:Grepper <C-r>"<CR>
 nmap gs  <plug>(GrepperOperator)
 nmap fg yiw:GrepperGrep
 nmap gn :cn<CR>
