@@ -1,3 +1,5 @@
+set shell=bash 
+set shellcmdflag=-c
 set nocompatible              
 filetype off                 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -11,9 +13,10 @@ Plugin 'godlygeek/tabular'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'ervandew/supertab'
 Plugin 'junegunn/fzf.vim'
-Plugin 'pearofducks/ansible-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'w0rp/ale'
+Plugin 'skywind3000/asyncrun.vim'
 Plugin 'fatih/vim-go'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'junegunn/goyo.vim'
@@ -120,3 +123,12 @@ augroup vagrant
   augroup END
 
 let g:table_mode_corner='|'
+autocmd BufWritePost *.js AsyncRun -post=checktime ./node_modules/.bin/eslint --fix %
+let g:ale_sign_error = ''
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+highlight clear SignColumn
+
+nnoremap <C-p> <plug>(fzf-complete-file-ag)
+let g:instant_markdown_allow_external_content = 0
+
