@@ -112,7 +112,7 @@ bindsym $mod+r mode "resize"
 
 bar {
         mode hide
-        modifier Mod4
+        modifier Mod4+Mod1
         strip_workspace_numbers yes
         status_command i3blocks
         position top
