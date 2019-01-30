@@ -68,7 +68,7 @@ imap hh <C-y>,
 :map <F7> z=
 :map <F8> zg
 :map <C-o> :NERDTreeToggle<CR>
-:imap <F10> <Esc>gqgjkA
+:imap <F9> <Esc>gqgjkA
 map <F11> :call NumberSlides()<CR>
 map <F12> :call RenumberSlides()<CR>
 
